@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "bindingId": "3fa1ccfa-7372-4193-a3e9-48978e7db79d",
+  "files": [
+    {
+      "path": "index.html",
+      "sha": "43bb23e1c98e0556eb8cd92cabdf900fd12b95cb"
+    },
+    {
+      "path": "contato.html",
+      "sha": "6c0c70d5ff519cf724a07284e651fff5c5b0333c"
+    }
+  ]
+}

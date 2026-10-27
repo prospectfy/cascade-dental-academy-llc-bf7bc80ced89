@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="pt-BR" data-site-architecture="pages-v1"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <meta name="description" content="Canais de contato oficiais da Cascade Dental Academy LLC. Telefone, WhatsApp, Website e perfil no Google Maps.">
+  
+  <!-- Google Fonts: Manrope (titulo) e Source Sans 3 (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "marca": "#E11D48",
+            "marca-forte": "#BE123C",
+            "superficie": "#FFF1F2",
+            "tinta": "#1C1917",
+            "suave": "#78716C"
+          },
+          fontFamily: {
+            "titulo": ["Manrope", "sans-serif"],
+            "corpo": ["Source Sans 3", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Escala e Tipografia Mandatórias */
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    .body-editorial {
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 65ch;
+    }
+    .eyebrow-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Animação suave com CSS puro no carregamento */
+    @keyframes entranceFade {
+      0% {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-entrance {
+      animation: entranceFade 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Respeito a prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      .animate-entrance {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
+    /* Estado ativo na navegação */
+    nav a[aria-current="page"] {
+      color: #E11D48;
+      font-weight: 700;
+    }
+
+    /* Raio único consistente em toda a página: 12px */
+    .unified-radius {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body class="bg-superficie text-tinta font-corpo antialiased selection:bg-marca selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- CABEÇALHO COMPILADO (Fora de <main> conforme arquitetura pages-v1) -->
+  <header class="w-full bg-superficie border-b border-rose-200/60 sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Marca Factual -->
+      <a href="./index.html" class="flex flex-col group focus:outline-none focus:ring-2 focus:ring-marca rounded p-1">
+        <span class="font-titulo text-lg md:text-xl font-extrabold tracking-tight text-tinta group-hover:text-marca transition-colors">
+          Cascade Dental Academy
+        </span>
+        <span class="eyebrow-label text-suave">Instituição de Ensino</span>
+      </a>
+
+      <!-- Menu Desktop em linha única (altura <= 80px) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium" aria-label="Navegação Principal">
+        <a href="./index.html" class="text-tinta hover:text-marca transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-marca rounded px-1">
+          Início
+        </a>
+        <a href="./contato.html" class="text-suave hover:text-marca transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-marca rounded px-1" aria-current="page">
+          Contato
+        </a>
+        <a href="https://wa.me/19713724394" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-11 px-5 bg-marca hover:bg-marca-forte text-white font-titulo font-semibold text-sm unified-radius transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-marca">
+          Falar no WhatsApp
+        </a>
+      </nav>
+
+      <!-- Menu Mobile Nativo acessível via Details/Summary (sem script) -->
+      <div class="md:hidden relative">
+        <details class="group">
+          <summary class="list-none flex items-center justify-center w-11 h-11 text-tinta hover:text-marca cursor-pointer focus:outline-none focus:ring-2 focus:ring-marca rounded-lg" aria-label="Abrir opções de navegação">
+            <svg class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </summary>
+          <div class="absolute right-0 top-14 w-64 bg-superficie border border-rose-200/80 unified-radius shadow-xl p-4 flex flex-col gap-3 z-50">
+            <a href="./index.html" aria-current="page" class="px-3 py-2 text-sm font-semibold rounded text-marca bg-rose-100/50">
+              Início
+            </a>
+            <a href="./contato.html" class="px-3 py-2 text-sm font-medium rounded text-tinta hover:text-marca hover:bg-rose-50">
+              Contato
+            </a>
+            <div class="pt-2 border-t border-rose-200/60">
+              <a href="https://wa.me/19713724394" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center h-11 bg-marca hover:bg-marca-forte text-white font-titulo font-semibold text-sm unified-radius shadow-sm">
+                WhatsApp Oficial
+              </a>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN EXCLUSIVO (Diretriz Canônica: exatamente um <main>, seções filhas diretas com data-site-page) -->
+  <main class="w-full flex-grow"><section data-site-page="contato" data-site-title="Contato" data-site-description="Canais de contato oficiais da Cascade Dental Academy LLC. Telefone, WhatsApp, Website e perfil no Google Maps." class="w-full border-t border-rose-200/80 bg-rose-50/40">
+      
+      <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div class="max-w-3xl mb-12">
+          <span class="eyebrow-label text-marca font-titulo block mb-2">Canais Oficiais</span>
+          <h2 class="font-titulo font-extrabold text-tinta hero-title mb-4">
+            Contato e Atendimento
+          </h2>
+          <p class="font-corpo text-suave body-editorial">
+            Centralize suas dúvidas e solicitações através dos pontos de contato confirmados da Cascade Dental Academy LLC.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Painel Principal de Contato -->
+          <div class="lg:col-span-7 bg-white p-8 md:p-12 border border-rose-200/80 unified-radius shadow-sm space-y-8">
+            
+            <div class="border-b border-rose-100 pb-6">
+              <span class="eyebrow-label text-suave block mb-1">WhatsApp e Telefone</span>
+              <p class="font-titulo font-extrabold text-2xl text-tinta mb-2">(971) 372-4394</p>
+              <p class="text-sm text-suave mb-4">Atendimento direto para esclarecimento sobre cursos, processos e informações gerais.</p>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://wa.me/19713724394" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-11 px-6 bg-marca hover:bg-marca-forte text-white font-titulo font-semibold text-sm unified-radius transition-colors">
+                  Iniciar WhatsApp
+                </a>
+                <a href="tel:19713724394" class="inline-flex items-center justify-center h-11 px-6 border border-rose-300 text-tinta hover:text-marca hover:border-marca font-titulo font-semibold text-sm unified-radius transition-colors">
+                  Ligar Agora
+                </a>
+              </div>
+            </div>
+
+            <div class="border-b border-rose-100 pb-6">
+              <span class="eyebrow-label text-suave block mb-1">Website Institucional</span>
+              <p class="font-titulo font-bold text-lg text-tinta mb-2">cascadedentalacademy.com</p>
+              <a href="https://cascadedentalacademy.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-titulo font-semibold text-marca hover:underline text-sm">
+                Acessar website oficial →
+              </a>
+            </div>
+
+            <div>
+              <span class="eyebrow-label text-suave block mb-1">Mapeamento e Registro</span>
+              <p class="font-titulo font-bold text-lg text-tinta mb-2">Perfil Google Maps</p>
+              <p class="text-sm text-suave mb-3">Verifique a localização e a listagem verificada no mapa.</p>
+              <a href="https://maps.google.com/?cid=4904080953611290033&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-titulo font-semibold text-marca hover:underline text-sm">
+                Visualizar no Google Maps →
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Painel Lateral de Diretrizes e Informação Factual -->
+          <div class="lg:col-span-5 bg-white p-8 md:p-10 border border-rose-200/80 unified-radius shadow-sm space-y-6">
+            <h3 class="font-titulo font-bold text-xl text-tinta">
+              Orientações de Atendimento
+            </h3>
+            <div class="space-y-4 text-suave text-sm leading-relaxed">
+              <p>
+                A Cascade Dental Academy LLC recebe solicitações de estudantes e interessados primordialmente por mensagens e ligações.
+              </p>
+              <p>
+                Para obter detalhes programáticos ou agendar visitas institucionais, envie uma mensagem com suas dúvidas para o número oficial.
+              </p>
+            </div>
+            
+            <div class="p-5 bg-superficie rounded-lg border border-rose-200/60">
+              <span class="font-titulo font-bold text-xs uppercase text-marca tracking-wider block mb-1">
+                Razão Social
+              </span>
+              <p class="font-titulo font-semibold text-tinta text-base">
+                Cascade Dental Academy LLC
+              </p>
+              <span class="text-xs text-suave block mt-1">
+                Instituição Educacional em Odontologia
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section></main>
+
+  <!-- RODAPÉ COMPILADO (Fora de <main> conforme arquitetura pages-v1) -->
+  <footer class="w-full bg-superficie border-t border-rose-200/70 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex flex-col text-center md:text-left">
+        <span class="font-titulo font-extrabold text-tinta text-base">
+          Cascade Dental Academy LLC
+        </span>
+        <span class="text-xs text-suave mt-1">
+          Instituição Educacional Odontológica • Telefone: (971) 372-4394
+        </span>
+      </div>
+
+      <div class="flex items-center gap-6 text-sm text-suave">
+        <a href="./index.html" class="hover:text-marca transition-colors">Início</a>
+        <a href="./contato.html" class="hover:text-marca transition-colors">Contato</a>
+        <a href="https://cascadedentalacademy.com/" target="_blank" rel="noopener noreferrer" class="hover:text-marca transition-colors">Website</a>
+        <a href="https://maps.google.com/?cid=4904080953611290033&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer" class="hover:text-marca transition-colors">Google Maps</a>
+      </div>
+
+      <div class="text-xs text-suave text-center md:text-right">
+        © Cascade Dental Academy LLC. Todos os direitos reservados.
+      </div>
+
+    </div>
+  </footer>
+
+
+
+</body></html>
